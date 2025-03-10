@@ -9,12 +9,26 @@ function hideSidebar() {
 let cart = [];
 
 function addToCart(item, price) {
-    cart.push({ name: item, price: price });
+    let itemExists = false;
+    for (let i = 0; i < cart.length; i++) {
+        if (cart[i].name === item) {
+            cart[i].quantity++;
+            itemExists = true;
+            break;
+        }
+    }
+    if (!itemExists) {
+        cart.push({ name: item, price: price, quantity: 1 });
+    }
     updateCart();
 }
 
 function removeFromCart(index) {
-    cart.splice(index, 1);
+    if (cart[index].quantity > 1) {
+        cart[index].quantity--;
+    } else {
+        cart.splice(index, 1);
+    }
     updateCart();
 }
 
@@ -27,27 +41,16 @@ function updateCart() {
     let total = 0;
 
     cart.forEach((item, index) => {
-        total += item.price;
+        total += item.price * item.quantity;
         let li = document.createElement("li");
-        li.innerHTML = `${item.name} - ₱${item.price.toFixed(2)} 
-                        <button class="remove-btn" onclick="removeFromCart(${index})">×</button>`;
+        li.innerHTML = `${item.name} (x${item.quantity}) - ₱${(item.price * item.quantity).toFixed(2)} 
+                          <button class="remove-btn" onclick="removeFromCart(${index})">×</button>`;
         cartList.appendChild(li);
     });
 
     totalElement.textContent = total.toFixed(2);
 
-    // Show the cart only if there are items
     cartContainer.style.display = cart.length > 0 ? "block" : "none";
-}
-
-function checkout() {
-    if (cart.length === 0) {
-        alert("Your cart is empty!");
-        return;
-    }
-    alert("Order placed successfully!");
-    cart = [];
-    updateCart();
 }
 
 // services start
