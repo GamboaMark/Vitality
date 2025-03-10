@@ -1,0 +1,542 @@
+/*Lagay nyo yung main content html sa <main> tas wag nyo sama yung footer*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    min-height: 100vh;
+    background-image: url(Picture/Background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: poppins, sans-serif;
+
+}
+main {
+    flex: 1;
+}
+
+nav{
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul{
+    width: 100%;
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li{
+    height: 50px;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+nav a:hover{
+    background-color: #f1f1f1;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: -10 0 10px rgba(0, 0, 0, 0.1)2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: all 0.3s ease;
+    display: none;
+    align-items: flex-end;
+}
+.sidebar li{
+    width: 100%;
+    
+}
+.sidebar a {
+    width: 100%;
+}
+
+.menuButton{
+    display: none;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height:80vh;
+    padding-left: 5%;
+}
+
+.hero-text {
+    max-width: 700px;
+    color: black;
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    max-width: 570px;
+}
+
+button {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #e68900;
+
+}
+a:hover {
+    color: #B0843F;
+}
+.box .links li a:hover {
+background-color: pink;
+}
+
+span {
+    color: #B0843F;
+}
+
+/*About Page*/
+.about-title {
+    color: #B0843F;
+    text-shadow: 2px 2px #000000;
+    text-align: center;
+    width: 100%;
+    background: rgb(22,22,22);
+background: linear-gradient(0deg, rgb(255, 255, 255) 0.5%, rgba(253,253,255,0) 80%);
+    min-height: 100vh;
+    line-height: 100vh;
+    padding-left: 5%;
+
+    font-size: 3rem;
+    font-weight: 700;
+}
+.about-information{
+
+    width: 100%;
+min-height: 50vh;
+background-color: rgb(255, 255, 255);
+}
+
+.about-information h1{
+    width: 100%;
+    position: relative;
+    text-align: center;
+    font-size: 4em;
+
+    
+}
+
+.about-content {
+    
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 10%;
+    width: 90%;
+    margin: 0 auto;
+    padding: 150px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-content img {
+    width: 550px; 
+    height: auto; 
+    object-fit: cover;
+    border-radius: 50px;
+    border-bottom: 5px solid #e68900;
+    border-right:8px solid #e68900;
+}
+
+.about-content p {
+    font-size: 1.6em;
+    flex: 1; 
+    padding: 25px;
+}
+
+.about-teams {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.teams-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+
+   
+}
+
+.teams-person {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    max-width: 100%;
+}
+
+.teams-person img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.teams-person h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.teams-person p {
+    color: #666;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(22, 22, 22, 1);
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 0.9rem;
+
+}
+.footer-container {
+ flex-wrap: wrap;
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.box {
+ 
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   padding-right: 5%;
+    height: auto;
+   
+}
+
+.logo img {
+
+   width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+
+.about {
+    flex:1;
+   
+}
+
+.links {
+flex: 1;
+
+}
+
+.links li {
+    display: flex;
+    
+   align-items: center;
+   justify-content: center;
+  
+    
+}
+
+.links li a {
+    padding: 0 5%;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.contact {
+    flex: 1;
+
+}
+
+.hideOnMobile a:hover {
+    color: #B0843F; /* Change text color */
+    
+   
+}
+
+.footer-container h1 {
+    color: #B0843F;
+}
+
+
+
+
+@media screen and (max-width: 768px){
+    .teams-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+   .about-title {
+    font-size: 2em;
+   }
+    footer {
+        position: relative;
+    }
+
+    .about-content {
+        flex-direction: column; 
+        padding: 50px;
+    }
+
+    .about-content img {
+        order: -1;
+        width: 100%; 
+        height: 100%;
+    }
+
+    .about-content p {
+        font-size: 1.3em;
+        flex: 1; 
+       
+        text-align: center;
+    }
+    .about-information h1{
+     font-size: 2.5em;   
+    }
+
+
+
+
+    .hideOnMobile{
+        display: none;
+    }
+    .menuButton{
+        display: block;
+    }
+    body {
+        background-image: url(Picture/Background-mobile.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .container {
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero-text {
+        background: rgba(255, 255, 255, 0.8);
+        padding: 15px;
+        border-radius: 10px;
+        color: black;
+    }
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+    .footer-container {
+        flex-direction: column;
+    }
+    .logo {
+        margin-right: 0;
+    }
+    .logo img {
+       display: none;
+      
+    }
+}
+
+
+@media screen and (max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
+}
+
+/* Services Start */
+.services-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgba(48, 44, 33, 0.8);
+}
+
+.services-section h2 {
+    color: #DED6CB;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1400px;
+    margin: auto;
+    width: 90%;
+    transition: opacity 0.5s ease-out;
+}
+
+.service-box {
+    background: #DED6CB;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+}
+
+.service-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.service-box h3 {
+    color: #302C21;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.service-box p {
+    color: #302C21;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.toggle-btn, #backBtn {
+    background-color: #814B23;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover, #backBtn:hover {
+    background-color: #302C21;
+}
+
+.expanded-view {
+    display: none;
+    background: #DED6CB;
+    padding: 50px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 90%;
+    margin: auto;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+
+.expanded-view.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.expanded-content img {
+    width: 50%;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+
+.expanded-content h3 {
+    font-size: 2rem;
+    color: #302C21;
+}
+
+.expanded-content p {
+    font-size: 1.2rem;
+    color: #302C21;
+    line-height: 1.6;
+}
+
+#backBtn {
+    margin-top: 20px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Services End*/

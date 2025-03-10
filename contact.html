@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitaly Tea</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+<!--   YUNG MGA LINK NA NAKA SPAN IBAIBA DEPENDE KUNG ANONG PAGE -->
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><img src="Picture/close_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="close"></a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html"><span>Contact</span></a></li>
+            <li><a href="#">Order</a></li>
+        </ul>
+
+        <ul>
+            <li><a href="#">Vitaly Tea</a></li>
+            <li class="hideOnMobile"><a href="index.html">Home</a></li>
+            <li class="hideOnMobile"><a href="about.html">About</a></li>
+            <li class="hideOnMobile"><a href="services.html">Services</a></li>
+            <li class="hideOnMobile"><a href="menu.html">Menu</a></li>
+            <li class="hideOnMobile"><a href="contact.html"><span>Contact</span></a></li>
+            <li class="hideOnMobile"><a href="#">Order</a></li>
+            <li class="menuButton" onclick=showSidebar()><a href="#"><img src="/Picture/menu_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="menu"></a></li>
+        </ul>
+    </nav>
+
+    <main id="contactMain">
+        
+        <div id="contactDetails">
+            <div id="contactContainer">
+                <h1>Contact Us</h1>
+                <p>We’d love to hear from you! Reach out to us through any of the following methods:</p>
+                <p><strong>Email:</strong> vitality@gmail.com</p>
+                <p><strong>Phone:</strong> +63 9123 456 789</p>
+                <p><strong>Address:</strong> España, Manila</p>
+            </div>
+            <h2>Find Us on the Map</h2>
+            <h1>MAIN BRANCH</h1>
+            <div id = "map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117896.03940758912!2d113.86228809635467!3d22.569705121031905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403edd8df790aa1%3A0x37358acf29a76ff9!2sShenzhen%20Airport%20Logistics%20Distribution%20Center!5e0!3m2!1sen!2sph!4v1741344096637!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div id="inquiry">
+            
+            <form onsubmit="return validateForm()">
+                <h2>Inquiry Form</h2>
+                <div id="personInp">
+                    <div id="inp1">
+                        <input type="text" id="name" placeholder="NAME" name="name" required>
+                    </div>
+                    <div id="inp2">
+                        <input type="email" id="email" placeholder="EMAIL" name="email" required>
+                    </div>
+                </div>
+                    <textarea id="message" name="message" placeholder="EMAIL" rows="4" required></textarea>
+                <button type="submit">Submit Inquiry</button>
+            </form>
+            
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+         <div class="box logo">
+           <img src="Picture/Logo.png" alt="">
+         </div>
+        <div class="box about">
+         <h1>About</h1>
+         <p>Vitaly Tea offers a refreshing experience with every sip, using only the freshest ingredients to create extraordinary flavors.</p>
+        </div>
+ 
+        <div class="box links">
+         <h1>Links</h1>
+         <li class="hideOnMobile"><a href="index.html"><span>Home</span></a><a href="about.html">&nbsp;&nbsp;&nbsp;About</a> </li>
+             <li class="hideOnMobile"><a href="services.html">Services</a><a href="#">Menu</a></li>
+             <li class="hideOnMobile"><a href="#">Contact</a> <a href="#">Order</a></li>
+            
+        </div>
+         <div class="box contact">
+             <h1>Contact</h1>
+             <p>vitality@gmail.com</p>
+             <p>+63 9123 456 789</p>
+             <p>España, Manila</p>
+         </div>
+        </div>
+        <p class="footer-copy">&copy; 2025 Vitaly Tea. All rights reserved.</p>
+     </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
